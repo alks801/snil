@@ -1,0 +1,45 @@
+.row {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+
+  // justify
+  &__left {
+    justify-content: flex-start;
+  }
+  
+  &__center {
+    justify-content: center;
+  }
+  
+  &__right {
+    justify-content: flex-end;
+  }
+
+  &__space-between {
+    justify-content: space-between;
+  }
+
+  &__space-around {
+    justify-content: space-between;
+  }
+
+  // align
+  &__top {
+    align-items: flex-start;
+  }
+
+  &__middle {
+    align-items: center;
+  }
+
+  &__bottom {
+    align-items: flex-end;
+  }
+}

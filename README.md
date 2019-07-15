@@ -1,2 +1,0 @@
-# snil
-Created with CodeSandbox

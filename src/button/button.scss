@@ -1,0 +1,72 @@
+@import '../vars.scss';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  outline: 0;
+  user-select: none;
+
+  background: transparent;
+
+  border: 1px solid $color-border-control;
+  border-radius: $border-radius-control-m;
+
+  transition-duration: 200ms;
+  transition-property: background, border-color, color, width;
+  transition-timing-function: ease;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  &, *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+  &:hover {
+    border-color: $color-border-control-hover;
+  }
+
+  &:active {
+    background: $color-background-control-active;
+  }
+  
+  &__disabled {
+    border-color: transparent;
+    background: $color-background-control-disabled;
+    cursor: default;
+    pointer-events: none;
+    opacity: $opacity-disabled;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family;
+  }
+
+  &__size {
+    &-s {
+      height: 30px;
+      padding: 0 15px;
+      font-size: $font-size-s;
+    }
+    &-m {
+      height: 40px;
+      padding: 0 20px;
+      font-size: $font-size-m;
+    }
+    &-l {
+      height: 50px;
+      padding: 0 25px;
+      font-size: $font-size-l;
+    }
+  }
+}

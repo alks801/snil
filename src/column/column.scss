@@ -1,0 +1,72 @@
+.column {
+  display: flex;
+  max-width: 100%;
+  min-height: 1px;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+
+  // width
+    &__width_auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  &__width_available {
+    flex-basis: auto;
+    min-height: auto;
+    height: auto;
+  }
+
+  $col-width: calc(100% / 12);
+  @for $i from 1 to 12 {
+      &__width-#{$i} {
+          flex: 0 0 calc(#{$col-width} * #{$i});
+          max-width: calc(#{$col-width} * #{$i});
+      }
+  }
+
+  @for $i from 1 to 11 {
+      &__offset-#{$i} {
+          margin-left: calc(#{$col-width} * #{$i});
+      }
+  }
+
+
+  // justify
+  &__left {
+    justify-content: flex-start;
+  }
+  
+  &__center {
+    justify-content: center;
+  }
+  
+  &__right {
+    justify-content: flex-end;
+  }
+
+  &__space-between {
+    justify-content: space-between;
+  }
+
+  &__space-around {
+    justify-content: space-between;
+  }
+
+  // align
+  &__top {
+    align-items: flex-start;
+  }
+
+  &__middle {
+    align-items: center;
+  }
+
+  &__bottom {
+    align-items: flex-end;
+  }
+}
