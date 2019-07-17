@@ -1,6 +1,6 @@
 {
   "name": "snil",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Minimalistic lib with positioning wrappers and useful components",
   "keywords": [],
   "main": "src/index.js",
